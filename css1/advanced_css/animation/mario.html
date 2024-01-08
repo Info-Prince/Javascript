@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+            ), url(../../images/mario-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .image img {
+            width: 150px;
+            position: absolute;
+            bottom: 8.3%;
+            animation: mario 3s linear infinite;
+        }
+
+        @keyframes mario {
+            0% {
+                translate: 0%;
+            }
+            100%{
+                /* translate: calc(100vw-150px); */
+                transform: translate(calc(100vw - 150px));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="image">
+        <img src="../../images/mario-run.gif" alt="">
+    </div>
+</body>
+</html>

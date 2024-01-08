@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vw;
+            /* display: grid;
+            place-items: center; */
+        }
+        .container{
+            width: 60vw;
+            height: 100vh;
+            background-image: linear-gradient(45deg, 
+            rgba(40, 40, 221, 0.5), 
+            rgba(8, 211, 8,0.5),
+            rgba(60, 170, 152, 0.5));
+            box-shadow: 0px 5px 10px rgb(129, 125, 125);
+            margin: 100px auto;
+            padding: 1rem;
+            display: grid;
+            gap: 1rem;
+            /* grid-template-rows: 100px 100px;
+            grid-template-columns: 100px 100px 100px; */
+
+            /* grid-template-rows: 1fr 1fr; */
+            /* grid-template-rows: repeat(2, 1fr); */
+            /* grid-template-rows: repeat(auto, 1fr);
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3,1fr); */
+            grid-template-rows: repeat(6,1fr);
+            grid-template-columns: repeat(1,1fr);
+
+
+        }
+        .items {
+            /* width: 70px;
+            height: 70px; */
+            background-image: linear-gradient(45deg, blue,yellow);
+            border: 2px solid black;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        /* .header, .footer {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .i2 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .i3 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        } */
+
+        @media (min-width:500px) {
+            
+            .container {
+                grid-template-rows: repeat(4, 1fr);
+               /* grid-template-columns: 1fr 1fr 1fr; */
+               grid-template-columns: repeat(3,1fr);
+            }
+            .header, .footer {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            }
+            .i2 {
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+            .i3 {
+                grid-column-start: 2;
+                grid-column-end: 4;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items i2">Item2</div>
+        <div class="items i3">Item3</div>
+        <div class="items i4">Item4</div>
+        <div class="items i5">Item5</div>
+        <div class="items footer">Item6</div>
+    </div>
+</body>
+</html>

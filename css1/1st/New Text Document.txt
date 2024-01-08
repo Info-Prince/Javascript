@@ -1,0 +1,45 @@
+1. video intro
+2. how the website works
+3. html vs css vs j.s.
+4. what is css who maintained it ?
+5. css history.
+	5.1
+	thapa technical form future.
+------------------------------------------------------------
+
+6. inline vs internal vs external css
+7. comments in css
+8. colors
+9. css bonus --> (need to revise)
+10. background properties
+11. blending mode in figma --> (i think part of bonus)
+12. parallax website project. 
+13. units in css
+14. font properties
+15. text properties
+16. border in css
+17. padding
+18. margin
+19. box model
+20. gradient
+21. box shadow vs drop shadow.
+22. filters in css 
+23. lists in css --> revision completed...
+24. position
+25. z-index
+26. source code sale
+27. overflow in css
+28. psuedo-elements.
+29. psuedo-class 
+30. column layout
+31. flexbox
+32. grid
+33. transitions
+34. transform
+35. animation 
+36. css variable
+37. css specificity
+38. css new features
+39. is where has psuedo elements
+40. container queries in css
+41. Bonus : floats + clip path
