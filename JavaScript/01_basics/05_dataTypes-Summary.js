@@ -12,7 +12,7 @@ let userEmail;
 
 const id = Symbol ( '123' );
 const anotherId = Symbol ( '123' );
-console.log(id === anotherId);
+console.log(id === anotherId); //symbol used to make unique element. so id won't equal to anotherid
 const bigNumber = 2342394809n; //bigint
 console.log(typeof (bigNumber));
 

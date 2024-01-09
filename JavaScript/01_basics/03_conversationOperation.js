@@ -64,6 +64,8 @@ console.log(stringNumber);
 // // console.log(true+); // wrong syntax
 // console.log(+"");
 
+
+//Prefix and Postfix operator
 let gameCounter = 100;
 ++gameCounter; // gameCounter++;
 console.log(gameCounter);
