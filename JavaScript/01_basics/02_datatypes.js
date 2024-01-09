@@ -2,7 +2,7 @@
 
 //"use strict"; // treat all js code as newer version
 
-//alert ( 2 + 3 ); // error, bcz we are using nodejs not browser.
+//alert ( 2 + 3 ); // error, bcz we are using nodejs, not browser.
 
 console.log( 
     3 + 3 
@@ -10,9 +10,9 @@ console.log(
 
 console.log("prince")
 
-// let age= 18;
-// let name = "hitesh";
-// let isLogedIn = true;
+// let age= 18;              integer datatype
+// let name = "hitesh";      string datatype
+// let isLogedIn = true;     boolean datatype
 
 // number => range 2 to power 53
 // bigint for long number
@@ -26,4 +26,4 @@ console.log("prince")
 //object
 
 console.log(typeof undefined);  //undefined
-console.log(typeof null);  //object
+console.log(typeof null);  //object, it's treated as object.
