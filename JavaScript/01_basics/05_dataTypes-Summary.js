@@ -14,7 +14,9 @@ const id = Symbol ( '123' );
 const anotherId = Symbol ( '123' );
 console.log(id === anotherId); //symbol used to make unique element. so id won't equal to anotherid
 const bigNumber = 2342394809n; //bigint
+const bigNumber2 = 2342394809; //number
 console.log(typeof (bigNumber));
+console.log(typeof (bigNumber2));
 
 
 //! Non Primitive (reference type) data type
@@ -28,11 +30,12 @@ let newObj = {
     age : 18,
     city : "patna"
 } 
-
 // function() {} => function declaration
 const myFunction = function() {
     console.log("hello");
 }
+
+myFunction (); //function call
 
 //! *********************** --Memory-- ****************************
 
@@ -50,9 +53,10 @@ let userOne = {
     upi : "code@ybl"
 }
 
-let userTwo = userOne;
+let userTwo = userOne; //typeof usertwo is also object due to object conversation
 
 userTwo.email = "code@prince.com";
 
 console.log(userOne.email);
 console.log(userTwo.email);
+console.log(typeof (userTwo));
