@@ -4,7 +4,7 @@
 
 /*?  Text Alignment:- The `text-align` property controls the horizontal alignment of text within an element's box.
 - Common values are `left`, `center`, `right`, and `justify`. */
-
+ 
 /*? Text Decoration:- The `text-decoration` property allows you to add decorations like underlines, overlines, or line-through to text. */
 
 /* - text-decoration-line
@@ -56,7 +56,7 @@ body {
   letter-spacing: 1px;
   word-spacing: 2px;
   line-height: 1.5;
-  /* text-shadow: 1px 1px 2px gray, 0px 0px 3px blue, 0 0 0.02em red; */
+  text-shadow: 1px 1px 2px gray, 0px 0px  1px blue, 0 0 2px red;
 }
 
 /** ------------------------------------- -->

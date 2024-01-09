@@ -16,7 +16,7 @@ ordered lists (<ol>) - the list items are marked with numbers or letters */
 
 /* ul {
   list-style: circle inside url("");
-} */
+} */ 
 
 /** ---------------------------------------- --> */
 
@@ -48,10 +48,6 @@ body {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
 
 ul {

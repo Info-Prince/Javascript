@@ -21,7 +21,7 @@
 }
 
 html {
-  font-family: "Urbanist";
+  font-family: "Urbanist"; 
 }
 
 body {
@@ -36,16 +36,10 @@ body {
   width: 300px;
   height: 300px;
   padding: 40px;
-  background-color: rgb(211, 233, 14);
+  background-color: black;
   border-radius: 50%;
-
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-
   /*? box shadow here  */
-  box-shadow: 30px 30px 0px 50px orange ;
+  box-shadow: 30px 30px 0px 42px orange ;
   /* box-shadow: inset 30px 30px 0px 50px orange ; */
   /* box-shadow: 0px 0px 300px 50px orange; */
   /* box-shadow: inset ; */

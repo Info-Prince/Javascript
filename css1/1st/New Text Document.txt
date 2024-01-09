@@ -16,7 +16,7 @@
 12. parallax website project. 
 13. units in css
 14. font properties
-15. text properties
+15. text properties  
 16. border in css
 17. padding
 18. margin
