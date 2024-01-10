@@ -14,12 +14,12 @@ let valueInNumber = Number (score);
 console.log(typeof (valueInNumber));
 console.log (valueInNumber);
 
-// "33" => 33
-// "33abc" => NaN but type is number
-// true => 1 or false => 0
+"33" => 33
+"33abc" => NaN but type is number
+true => 1 or false => 0
 
-// let isLogedIn = 1;
-// let isLogedIn = "";
+let isLogedIn = 1;
+let isLogedIn = "";
 let isLogedIn = "prince";
 
 let booleanIsLogedIn = Boolean (isLogedIn);
@@ -58,6 +58,13 @@ console.log(stringNumber);
 // console.log(1 + "2");
 // console.log("1" + 2 + 2);
 // console.log(1 + 2 + "2");
+
+//type of all string
+// console.log(typeof ("1" + 2));
+// console.log(typeof (1 + "2"));
+// console.log(typeof ("1" + 2 + 2));
+// console.log(typeof (1 + 2 + "3"));
+
 
 // console.log(true);
 // console.log(+true);

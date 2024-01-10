@@ -8,7 +8,7 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 const gameName = new String ("Prince-prince-prince");
 
 // console.log(gameName[0]);
-// console.log(gameName.__proto__);
+console.log(gameName.__proto__);
 
 // console.log(gameName.length);
 // console.log(gameName.toUpperCase());
@@ -18,19 +18,19 @@ const gameName = new String ("Prince-prince-prince");
 const newString = gameName.substring(0, 4);
 console.log(newString);
 
-const anotherString = gameName.slice(-5, 2);
-console.log(anotherString);
+// const anotherString = gameName.slice(-5, 2);
+// console.log(anotherString);
 
 const newStringOne = "   prince    ";
 console.log(newStringOne);
-console.log(newStringOne.trim());
+console.log(newStringOne.trim()); //all white spaces trimmed.
 
 const url = "https://cssbyprince.netlify-app";
 console.log(url.replace("-" , "."));
 
-console.log(url.includes("prince"));
+console.log(url.includes("prince")); //boolean type. define return char or string include or not.
 
-console.log(gameName.split("-"));
+console.log(gameName.split("-")); // split and arrange all element in an array.
 
 
 const prince = new String ("lets-learn-code-with-me");

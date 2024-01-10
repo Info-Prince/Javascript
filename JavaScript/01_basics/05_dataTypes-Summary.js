@@ -8,7 +8,7 @@ const scoreValue = 100.3; // both type is number
 
 const isLogedIn = true;
 const outsideTemp = null;
-let userEmail;
+let userEmail;  //undefined
 
 const id = Symbol ( '123' );
 const anotherId = Symbol ( '123' );

@@ -1,10 +1,10 @@
-
+let gameName = "Prince-World";
 
 const newString = gameName.substring(0, 4);
 console.log(newString);
 
-const anotherString = gameName.slice(-5, 2);
-console.log(anotherString);
+// const anotherString = gameName.slice(-5, 2);
+// console.log(anotherString); //didn't get it.
 
 const newStringOne = "   prince    ";
 console.log(newStringOne);

@@ -10,7 +10,7 @@ console.log(
 
 console.log("prince")
 
-// let age= 18;              integer datatype
+// let age= 18;              number datatype
 // let name = "hitesh";      string datatype
 // let isLogedIn = true;     boolean datatype
 
