@@ -57,13 +57,13 @@ const users = [
 
 // console.log(users[0]);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser)); // both most important. 
-console.log(Object.entries(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser)); // both most important. 
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty("isLogedIn"));
+// console.log(tinderUser.hasOwnProperty("isLogedIn"));
 
 //? ----------------------------Destructuring of Object------------------------------
 
@@ -74,21 +74,23 @@ const course = {
 }
 
 // course.courseInstructor
-
+// const {} = course; // {it will be filled by which element you want to construct of object. i.e course.}
 const {courseInstructor: instructor} = course
+const {courseInstructor} = course;
 
-// console.log(courseInstructor);
+console.log(courseInstructor);
 console.log(instructor);
 
 
 //! API come in either obj format or array format
-//// json ////
+//// json object format ////
 // {
 //     "name" : "prince",
 //     "course" : "js in hindi",
 //     "prince" : 999
 // }
 
+//// api array format ////
 
 // [
 //     {},
