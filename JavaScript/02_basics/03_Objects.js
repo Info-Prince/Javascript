@@ -1,12 +1,12 @@
 // singleton
-// Object.create (constructor method of creating object)
+// Object.create (constructor method of creating object) it's singleton
 
 // object literals
 
 const mySym = Symbol("key1");
 
 const jsUser = {
-    name: 'Prince',
+    name: "Prince",
     "last name": "Singh",
     mySym: "key1", //Actually it's not accessing symbol.
     [mySym]: "mykey1",
@@ -17,13 +17,14 @@ const jsUser = {
     LastLoginDays: ["Sunday", "Monday"]
 }
 
-console.log(jsUser.name);
-console.log(jsUser["name"]);
-console.log(jsUser["last name"]); //this won't accessed as first method.
-console.log(jsUser[mySym]);
+// console.log(jsUser.name);
+// console.log(jsUser["name"]); //both correct in this situation.
+
+// console.log(jsUser["last name"]); //this won't accessed as first method.
+// console.log(jsUser[mySym]);
 
 jsUser.email = "prince@chatgpt.com";
-console.log(jsUser);
+// console.log(jsUser);
 // Object.freeze(jsUser);
 jsUser.email = "prince@microsoft.com";
 console.log(jsUser);
@@ -32,7 +33,7 @@ jsUser.greetings = function() {
     console.log("Hello JS user");
 }
 
-jsUser.greetingTwo = function() {
+jsUser.greetingTw0 = function() {
     console.log(`Hello JS user, ${this.name}`);
 }
 
