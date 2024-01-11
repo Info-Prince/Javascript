@@ -1,18 +1,18 @@
 
-function sayMyName () {
-    console.log("P");
-    console.log("R");
-    console.log("I");
-    console.log("N");
-    console.log("C");
-    console.log("E");
-}
+// function sayMyName () {
+//     console.log("P");
+//     console.log("R");
+//     console.log("I");
+//     console.log("N");
+//     console.log("C");
+//     console.log("E");
+// }
 
 // sayMyName () //here sayMyName is function reference and () means execution.
 
-function addTwoNumbers (number1, number2) {
-    console.log(number1 + number2);
-}
+// function addTwoNumbers (number1, number2) {
+//     console.log(number1 + number2);
+// }
 
 // function  having parameter and reference having arguement
 function addTwoNumbers (number1, number2) {
@@ -45,14 +45,15 @@ function loginUserMessage (username = "sam" ) {
 
 
 // function calculateCartPrice (num1) //it will hold only single value
+
 // function calculateCartPrice (...num1)
-function calculateCartPrice (val1, val2, ...num1) { //rest operator (...) basically it will hold all rest value in array which has passed
+function calculateCartPrice (val1, val2, ...num1) { // basically rest operator (...) will hold all rest value in array which has been passed
     return num1;
 }
 
-// console.log(calculateCartPrice (200, 300, 400, 600));
+console.log(calculateCartPrice (200, 300, 400, 600));
 
-
+///////////////////////////handling object in function..............
 const user = {
     username : "Prince",
     price : 999
@@ -69,6 +70,7 @@ handleObject({
     price: 499
 })
 
+////////////////////////handling array in function..................
 const myNewArray = [100, 399, 423];
 
 function returnSecondArray (getArray) {
