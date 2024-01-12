@@ -8,10 +8,10 @@ const another_array = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]];
 
 const usable_another_array = another_array.flat(Infinity)
 
-// console.log(marvel_heros[3][1]);
-// console.log(concated_heros);
-// console.log(all_heros);
-// console.log(usable_another_array);
+console.log(another_array[3][1]);
+console.log(concated_heros);
+console.log(all_heros);
+console.log(usable_another_array);
 
 console.log(Array.isArray("prince"));
 console.log(Array.from("prince"));

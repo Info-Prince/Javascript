@@ -12,7 +12,7 @@ tinderUser.name = 'Prince'
 tinderUser.id = "310-23709"
 tinderUser.isLogedIn = false
 
-// console.log(tinderUser);
+// console.log(tinderUser)
 
 const regularUser = {
     email: "some@gmail.com",
@@ -32,11 +32,12 @@ const obj2 = { 3: "a", 4: "b" }
 const obj3 = { 5: "a", 6: "b" }
 
 // const obj3 = {obj1, obj2}
-// const obj3 = Object.assign({}, obj1, obj2) 
+// const obj5 = Object.assign({}, obj1, obj2, obj3) 
+// console.log(obj5);
 // {target}, and all object is source element. it's not about empty braces it's telling that assign all element into first defined object element.
 
 const obj4 = { ...obj1, ...obj2, ...obj3 }  //better to use spread 
-//console.log(obj4);
+console.log(obj4);
 
 
 //// how value of database come

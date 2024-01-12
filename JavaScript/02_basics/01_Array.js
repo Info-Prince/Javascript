@@ -5,14 +5,15 @@ const myHeros = ["shaktiman", "naagraj"];
 const myArr2 = ["amazon", 2, 3, Boolean, null]
 const  myarr3 = new Array (1, 2, 3, 4);
 
-console.log(myArr[2]);
-console.log(myArr2);
-console.log(myarr3.findIndex);
+// console.log(myArr[2]);
+// console.log(myArr2);
+// console.log(myarr3.findIndex);
 
 // Array methods
 
 myArr.push(5) // push -> add element
 myArr.push(9)
+// console.log(myArr);
 myArr.pop() //remove element
 
 // console.log(myArr);
