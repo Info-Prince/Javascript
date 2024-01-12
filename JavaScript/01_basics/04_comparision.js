@@ -1,11 +1,11 @@
-//Boolean is the type of aal comparision operator
+//Boolean is the type of all comparision operator
 
 // console.log( 2 > 1);
 // console.log( 2 >= 1);
 // console.log( 2 < 1);
 // console.log( 2 <= 1);
 // console.log( 2 == 1);
-// console.log( 2 != 1);
+console.log( 2 != 1);
 
 console.log("2" > 1);
 console.log("02" > 1);
@@ -19,5 +19,6 @@ console.log(null >= 0);  // // when we compare then js convert null into  0 afte
 // console.log(undefined < 0);  //? Don't use such conversation, clean code
 
 //?  --- => checking datatype too
-
 console.log("2" === 2);
+//data type didn't checked.
+console.log("2" == 2);

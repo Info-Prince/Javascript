@@ -46,7 +46,7 @@ console.log(stringNumber);
 // console.log(2-2);
 // console.log(2*3);
 // console.log(19/5);
-// console.log(2**2);
+// console.log(2**3);
 
 // let str1 = "hello";
 // let str2 = " prince";
@@ -59,7 +59,7 @@ console.log(stringNumber);
 // console.log("1" + 2 + 2);
 // console.log(1 + 2 + "2");
 
-//type of all string
+// // type of all string
 // console.log(typeof ("1" + 2));
 // console.log(typeof (1 + "2"));
 // console.log(typeof ("1" + 2 + 2));

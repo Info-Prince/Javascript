@@ -26,4 +26,4 @@ console.log("prince")
 //object
 
 console.log(typeof undefined);  //undefined
-console.log(typeof null);  //object, it's treated as object.
+console.log(typeof null);  //object, it's treated as object. 

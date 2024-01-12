@@ -2,12 +2,12 @@ const score = 400;
 // console.log(score);
 
 const balance = new Number (100); //strictly defined number type of data-type
-// console.log(balance);
+console.log(balance);
 
-// console.log(balance.toString());
-// console.log(balance.toString().length);
-// console.log(balance.toString().length.toFixed(2));
-// console.log(balance.toFixed(2));
+console.log(balance.toString());
+console.log(balance.toString().length);
+console.log(balance.toString().length.toFixed(2));
+console.log(balance.toFixed(2));
 
 // const otherNumber = 123.7431;
 // console.log(otherNumber.toPrecision(3));

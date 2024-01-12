@@ -59,4 +59,4 @@ userTwo.email = "code@prince.com";
 
 console.log(userOne.email);
 console.log(userTwo.email);
-console.log(typeof (userTwo));
+console.log(typeof (userTwo)); 
