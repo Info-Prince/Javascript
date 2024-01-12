@@ -78,4 +78,4 @@ function returnSecondArray (getArray) {
 }
 
 // console.log(returnSecondArray(myNewArray));
-console.log(returnSecondArray([200, 400, 399, 342]));
+console.log(returnSecondArray([200, 400, 399, 342])); 
