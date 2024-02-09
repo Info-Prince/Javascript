@@ -12,7 +12,7 @@ tinderUser.name = 'Prince'
 tinderUser.id = "310-23709"
 tinderUser.isLogedIn = false
 
-// console.log(tinderUser)
+console.log(tinderUser)
 
 const regularUser = {
     email: "some@gmail.com",
@@ -56,7 +56,7 @@ const users = [
     }
 ]
 
-// console.log(users[0]);
+// console.log(users[1]);
 
 // console.log(tinderUser);
 

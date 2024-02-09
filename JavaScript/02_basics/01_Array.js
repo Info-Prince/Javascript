@@ -26,9 +26,9 @@ myArr.pop() //remove element
 
 const newArr = myArr.join();
 
-console.log(myArr);
-console.log(newArr);
-console.log(typeof newArr);
+// console.log(myArr);
+// console.log(newArr);
+// console.log(typeof newArr);
 
 
 //? slice , splice
