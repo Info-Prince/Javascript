@@ -1,3 +1,5 @@
+//DOCUMENT OBJECT MODEL ---> (DOM)
+
 const title1 = document.getElementById('title')
 title1.style.backgroundColor = 'green';
 
