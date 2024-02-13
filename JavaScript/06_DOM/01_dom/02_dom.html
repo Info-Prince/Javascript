@@ -28,14 +28,18 @@
         parent1.children[0].style.padding = '1rem';
         parent1.children[0].style.backgroundColor = 'green';
         
-        console.log(parent1.firstElementChild)
-        console.log(parent1.lastElementChild)
+        // console.log(parent1.firstElementChild)
+        // console.log(parent1.lastElementChild)
 
         const dayOne = document.querySelector('.day')
-        console.log(dayOne.innerHTML)
+        // console.log(dayOne.innerHTML)
 
         //!child to parent traverse and vice versa..
-        console.log(dayOne.parentElement)
-        console.log(dayOne.nextElementSibling);
+        // console.log(dayOne.parentElement)
+        // console.log(dayOne.nextElementSibling);
+
+        //it's showing all nodes what is ongoing behind the scene...
+        const nodelist = parent1.childNodes
+        console.log('NODES: ', nodelist)
     </script>
 </html>
