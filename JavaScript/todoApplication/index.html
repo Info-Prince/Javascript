@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: grid;
+            place-items: center;
+            background-color: #1b1b1d;
+            color: white;
+        }
+        .parent {
+            padding: 4rem;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+            & h1 {
+                width: 100%;
+                text-align: center;
+            }
+            .input-field {
+                display: flex;
+                gap: 1rem;
+            }
+
+            & .input-field .btn {
+                padding: 1rem 2rem;
+                background-color: #8f75dd;
+                border: 2px solid black;
+                color: white;
+                border-radius: 3rem;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: all 0.26s linear;
+            }
+            & .input-field .btn:hover {
+                background-color: #1b1b1d;
+                color: #8f75dd;
+                border: 2px solid #8f75dd;
+            }
+            & .input-field #inputArea {
+                padding: .4rem;
+                font-size: 1rem;
+                border-radius: 1rem;
+                border: 1px solid;
+                min-width: 18rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <h1>Simple DOM Todo App</h1>
+        <div class="input-field">
+            <input type="text" id="inputArea">
+            <button class="btn">Click Me!</button>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+</html>
