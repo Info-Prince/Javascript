@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+
+    <script>
+        let getList = document.body.querySelector('ul');
+        const addLanguage = (langName) => {
+            const newElem = document.createElement('li');
+            // newElem.innerText = `${langName}`;
+            newElem.appendChild(document.createTextNode(langName)) //better approach than going to .innerHtml and their's respective
+            document.querySelector('.language').appendChild(newElem);
+        }
+        addLanguage('Python');
+        addLanguage('Ruby');
+        addLanguage('Perl');
+
+        //Edit
+        const secondLang = document.querySelector('li:nth-child(2)')
+        // secondLang.innerHTML = 'Mojo'; // but it's not right approach
+        const newLi = document.createElement('li');
+        newLi.textContent = 'Mojo'; // here we've made another element and further appended it.
+        secondLang.replaceWith(newLi)
+
+        //edit
+        const firstLang = document.querySelector('li:first-child')
+        firstLang.outerHTML = '<li>Mongos</li>';
+
+        //remove
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
+    </script>
+</body>
+</html>
