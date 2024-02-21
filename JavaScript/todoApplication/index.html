@@ -27,12 +27,12 @@
                 width: 100%;
                 text-align: center;
             }
-            .input-field {
+            .inputField {
                 display: flex;
                 gap: 1rem;
             }
 
-            & .input-field .btn {
+            & .inputField .btn {
                 padding: 1rem 2rem;
                 background-color: #8f75dd;
                 border: 2px solid black;
@@ -43,12 +43,12 @@
                 font-size: 1rem;
                 transition: all 0.26s linear;
             }
-            & .input-field .btn:hover {
+            & .inputField .btn:hover {
                 background-color: #1b1b1d;
                 color: #8f75dd;
                 border: 2px solid #8f75dd;
             }
-            & .input-field #inputArea {
+            & .inputField #inputArea {
                 padding: .4rem;
                 font-size: 1rem;
                 border-radius: 1rem;
@@ -60,15 +60,47 @@
 </head>
 <body>
     <div class="parent">
-        <h1>Simple DOM Todo App</h1>
-        <div class="input-field">
+        <h1 class="todoHeading">Simple DOM Todo App</h1>
+        <div class="inputField">
             <input type="text" id="inputArea">
             <button class="btn">Click Me!</button>
         </div>
+        <div class="todoListsElem" style="display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2rem;
+        font-size: 1.3rem;"></div>
     </div>
 
     <script>
-        
+        let parentElem = document.querySelector('.parent')
+        console.log(parentElem);
+        let inputElem = parentElem.querySelector('.inputField').querySelector('#inputArea');
+        let clickBtn = parentElem.querySelector('.inputField').querySelector('.btn');
+        let todoElem = parentElem.querySelector('.todoListsElem')
+        console.log(todoElem);
+
+        // console.log(inputElem);
+        // console.log(clickBtn);
+
+        clickBtn.addEventListener('click', () => {
+            const addTodo = ( () => {
+                // console.log(inputElem.value);
+                let pElem = document.createElement('p');
+                console.log(pElem);
+                pElem.innerText = inputElem.value;  
+                todoElem.append(pElem);
+
+                inputElem.value = ""
+            }) ();
+        })   
+
+
+        todoElem.addEventListener ('click', (event) => {
+            console.log(event.target);
+            let currentElem = event.target;
+            currentElem.remove();
+        })
     </script>
 </body>
 </html>
