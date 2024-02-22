@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Switcher</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Color Scheme Switcher</h1>
+    <div class="container">
+      <div class="buttons" id="gray"></div>
+      <div class="buttons" id="blue"></div>
+      <div class="buttons" id="yellow"></div>
+      <div class="buttons" id="white"></div>
+      <div class="buttons" id="purple"></div>
+    </div>
+    <h1 class="buttom-heading">
+      Try clicking on one of the colors above to change the background color of
+      this page!
+    </h1>
+    <script>
+      const body = document.body;
+      const button = document.querySelectorAll(".buttons");
+
+      button.forEach(function (curElem) {
+        // console.log(curElem);
+        const bgcolor = curElem.id;
+        // console.log(bgcolor);
+
+        curElem.addEventListener("click", (eventObj) => {
+          // console.log(eventObj);
+          const bgcolor = eventObj.target.id;
+          console.log(bgcolor);
+          if (bgcolor === "gray") {
+            document.body.style.backgroundColor = bgcolor;
+          }
+          if (bgcolor === "purple") {
+            document.body.style.backgroundColor = bgcolor;
+          }
+          if (bgcolor === "white") {
+            document.body.style.backgroundColor = bgcolor;
+          }
+          if (bgcolor === "blue") {
+            document.body.style.backgroundColor = bgcolor;
+            body.style.color = "white";
+          }
+          if (bgcolor === "yellow") {
+            document.body.style.backgroundColor = bgcolor;
+            body.style.color = "black";
+          }
+        });
+        // console.log(curElem.id)
+      });
+    </script>
+  </body>
+</html>
