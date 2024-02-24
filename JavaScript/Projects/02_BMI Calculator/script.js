@@ -20,4 +20,9 @@ form.addEventListener ('submit', (eventObj) => {
         const bmi = (weight / (( height * height ) / 10000)).toFixed(2);
         results.innerHTML = `<span>${bmi}</span>`
     }
+
+    //showing range
+    const weightGuide = document.querySelectorAll('.weightGuide');
+    console.log(weightGuide);
+
 })
