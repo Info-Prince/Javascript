@@ -23,6 +23,23 @@ form.addEventListener ('submit', (eventObj) => {
 
     //showing range
     const weightGuide = document.querySelectorAll('.weightGuide');
-    console.log(weightGuide);
+    const underWeight = document.querySelector('#underWeight');
+    const normalWeight = document.querySelector('#normalRange');
+    const overWeight = document.querySelector('#overWeight');
+    weightGuide.forEach( (curElem) => {
+        const weightGuidePara = curElem.querySelectorAll('.rangeOfWeight');
+        // console.log(typeof weightGuidePara);
+        
+        weightGuidePara.forEach ( (elem) => {
+            const weightGuideId = elem.id;
+            if (weightGuideId === 'underWeight') {
+                underWeight.innerHTML = 'You are underweighted';
+            } else if (weightGuideId === 'normalRange') {
+                normalWeight.innerHTML = "You falls under normal weight";
+            } else if (weightGuideId === 'overWeight') {
+                overWeight.innerHTML = 'You are Overweighted';
+            }
+        })
+    })
 
 })
