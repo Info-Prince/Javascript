@@ -17,29 +17,32 @@ form.addEventListener ('submit', (eventObj) => {
     } else if ( weight === "" || weight < 0 || isNaN(weight)) {
         results.innerHTML = `weight ${weight}`
     } else {
-        const bmi = (weight / (( height * height ) / 10000)).toFixed(2);
+        var bmi = (weight / (( height * height ) / 10000)).toFixed(2);
         results.innerHTML = `<span>${bmi}</span>`
     }
 
-    //showing range
-    const weightGuide = document.querySelectorAll('.weightGuide');
-    const underWeight = document.querySelector('#underWeight');
-    const normalWeight = document.querySelector('#normalRange');
-    const overWeight = document.querySelector('#overWeight');
-    weightGuide.forEach( (curElem) => {
-        const weightGuidePara = curElem.querySelectorAll('.rangeOfWeight');
-        // console.log(typeof weightGuidePara);
+    //* showing range
+    // const weightGuide = document.querySelectorAll('.weightGuide');
+    // const underWeight = document.querySelector('#underWeight');
+    // const normalWeight = document.querySelector('#normalRange');
+    // const overWeight = document.querySelector('#overWeight');
+    const showMyRange = document.querySelector('.showMyRange');
+
+    if (bmi < 18.6) {
+        showMyRange.innerHTML = `${bmi} BMI UnderWeighted`  
+    } else if (bmi >= 18.6 && bmi <24.9) {
+        showMyRange.innerHTML = `${bmi} BMI Normal Weight`
+    } else if (bmi > 24.9) {
+        showMyRange.innerHTML = `${bmi} BMI OverWeight`
+    
+    }
+    // weightGuide.forEach( (curElem) => {
+    //     const weightGuidePara = curElem.querySelectorAll('.rangeOfWeight');
+    //     // console.log(typeof weightGuidePara);
         
-        weightGuidePara.forEach ( (elem) => {
-            const weightGuideId = elem.id;
-            if (weightGuideId === 'underWeight') {
-                underWeight.innerHTML = 'You are underweighted';
-            } else if (weightGuideId === 'normalRange') {
-                normalWeight.innerHTML = "You falls under normal weight";
-            } else if (weightGuideId === 'overWeight') {
-                overWeight.innerHTML = 'You are Overweighted';
-            }
-        })
-    })
+    //     weightGuidePara.forEach ( (elem) => {
+    //         const weightGuideId = elem.id;
+    //     })
+    // })
 
 })
