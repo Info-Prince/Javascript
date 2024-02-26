@@ -25,7 +25,8 @@ if (playGame) {
     });
 }
 
-
+// how to solve ?
+// firstly check whether user available for playing game or not. if available then add event on button and call validateGuess function (it will work of validation )
 //functions
 function validateGuess (guess) {
     if (guess > 100) {
