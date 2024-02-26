@@ -37,7 +37,7 @@ function validateGuess (guess) {
     } else {
         //guessed number validate
         prevGuess.push(guess);
-        if (numOfGuesses > 2 ) {
+        if (numOfGuesses > 9 ) {
             //no remain attempt
             cleanUp(guess);
             displayMessage(`Game Over. Random number was ${randomNumber}`);   
@@ -64,7 +64,7 @@ function checkGuess(guess) {
 function cleanUp (guess) {
     userInput.value = '';
     guessSlot.innerHTML += `${guess},  `;
-    remaining.innerHTML = `${2 - numOfGuesses}`;
+    remaining.innerHTML = `${10 - numOfGuesses}`;
     numOfGuesses++;
 }
 
@@ -92,7 +92,7 @@ function newGame () {
         numOfGuesses = 1;
         guessSlot.innerHTML = '';
         lowOrHigh.innerHTML = '';
-        remaining.innerHTML = `${2 - numOfGuesses}`;;
+        remaining.innerHTML = `${10}`;;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
 
