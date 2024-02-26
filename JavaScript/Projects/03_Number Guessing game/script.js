@@ -26,7 +26,7 @@ if (playGame) {
 }
 
 // how to solve ?
-// firstly check whether user available for playing game or not. if available then add event on button and call validateGuess function (it will work of validation )
+// firstly check whether user available for playing game or not. if available then add event on button and call validateGuess function (it will work of validation ), if it got valid guess then it will check remaining attepmt if no attempt then call cleanUp function (it will work of cleaning all field), dispMessage function (pass respective message like game over and random num.)  and endgame function will also be called and if attempt available then cleanUp function called and checkGuess function  (here we basically compare guessed value and call dispMessage function )  
 //functions
 function validateGuess (guess) {
     if (guess > 100) {
