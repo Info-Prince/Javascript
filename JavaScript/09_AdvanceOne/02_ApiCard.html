@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #424242; color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    
+    <div id="cardId"></div>
+
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/Info-Prince';
+        const xhr = new XMLHttpRequest (requestUrl); //interacting with servers
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function () {
+
+            if ( xhr.readyState === 4 ) {
+                let data = JSON.parse(this.responseText);
+                console.log(data);
+                let image = data.avatar_url;
+                let followers = data.followers;
+                displayCard (image, followers);
+            }
+        }
+        xhr.send();
+
+        function displayCard (image, followers ) {
+            const cardIds = document.querySelector('#cardId');
+            console.log(cardIds);
+            const newDiv = document.createElement('div');
+            newDiv.style.width = '10rem';
+            newDiv.style.aspectRatio = '1';
+            newDiv.style.backgroundColor = 'yellow';
+            document.querySelector('#cardId').appendChild (newDiv)
+            // newDiv.style.backgroundImage = image //unable to add image
+            console.log(image);
+
+
+        }
+
+    </script>
+</body>
+</html>

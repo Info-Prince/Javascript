@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: #424242; color: white;">
-    <pre>
+<body style="background-color: #424242; color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+    <pre style="overflow-x: scroll;">
         Value	State	Description
             0	UNSENT	Client has been created. open() not called yet.
             1	OPENED	open() has been called.
@@ -14,7 +14,7 @@
             3	LOADING	Downloading; responseText holds partial data.
             4	DONE	The operation is complete.
     </pre>    
-    
+    <div id="cardId" style="display: flex; align-items: center; justify-content: center;"></div>
 
     <script>
         //earlier there was a concept of XMLHttpRequest. XMLHttpRequest object are used to interact with servers. note it's object type.
@@ -52,7 +52,14 @@
         }
 
         function card (image, followers) {
-            document.createElement('div')
+            let cardField = document.getElementById ('cardId')
+            let newDiv = document.createElement ('div')
+            newDiv.style.width = '10rem';
+            newDiv.style.aspectRatio = '1';
+            newDiv.style.backgroundColor = 'yellow';
+            document.body.querySelector('#cardId').appendChild(newDiv)
+            newDiv.style.backgroundImage = image;
+            
         }
         // note :- this is not being used with arrow function.
         xhr.send ();
