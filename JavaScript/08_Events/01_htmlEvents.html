@@ -35,9 +35,58 @@
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        alert('clicked on owl')
-    }, false)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     alert('clicked on owl')
+    // })
+
+
+
+    //event bubbling / Event Propagation :- false parameter = no parameter. it's flow from bottom to top. It depends on user usecase.
+
+    document.getElementById('images').addEventListener('click', function(e){
+        // console.log('clicked inside of ul')
+    }, false);
+    document.getElementById ('owl').addEventListener ( 'click', (e) => {
+        // console.log('clicked on owl');
+        e.stopPropagation(); // ye propagate nhi hone dega, or else images ka event bhi invoke ho jata...
+    })
+
+
+
+    //event capturing :- true parameter, it flow top to bottom.
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside of ul')
+    // }, true)
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log('clicked on owl')
+    // }, true)
     
+
+    // preventDefault is as same as stopPropagation
+    document.getElementById('google').addEventListener ('click', (e) => {
+        e.preventDefault ();
+        //if we don't use stopPropagation then bubbling will be there. 
+        e.stopPropagation() // now bubbling stopped
+        console.log('google clicked');
+    }, false)
+
+
+
+
+    //project to remove image while clicking on it
+    document.querySelector('#images').addEventListener ('click', (e) => {
+        // console.log(e);
+        // console.log(e.target); // if we remove this then image  will be removed but li (list item) won't. so fix it
+
+        console.log(e.target.tagName);
+        if (e.target.tagName === ('IMG')) {
+            console.log (e.target.id)
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        // removeIt.parentNode.removeChild(removeIt); // both method having same imp.
+    }, false)
+
 </script>
 </html>
