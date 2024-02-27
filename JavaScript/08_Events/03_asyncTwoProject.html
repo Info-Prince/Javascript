@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+
+
+
+
+    <script>
+        //setTimeout and setInterval are not a core function of JS but it's a function of browser, it calls api.
+
+        //NOTE:- Basically handler , call back , function, all these having similar type of work but expressed by diff diff name or also have small difference.
+        // so in this function it needs tow arguments handler and timeout
+        // setTimeout() // it will execute code only once after provided timeout (wait time).
+        // setInterval() // it will continuously run the given code after a specific given time interval.
+        // setTimeout(() => {
+        //     console.log ('hello prince')
+        // }, 2000);
+
+        const sayMyName = () => { 
+            console.log ('hello prince')
+        }
+        setTimeout(sayMyName, 2000);//handler can also take reference
+
+        setInterval(() => {
+            console.log('Chai pio code karo');
+        }, 2000);   
+
+        const changeText = () => { //won't execute until called
+            document.querySelector ('h1').innerHTML = "Best JS Course"
+        }
+        const changeMe = setTimeout(changeText, 2000); 
+        //if we don't want to execute an event then we'll use clearTimeout
+        // clearTimeout (changeMe) // it should be apply on an event
+        document.querySelector('#stop').addEventListener ('click', (e) => {
+            e.preventDefault ();
+            clearTimeout (changeMe)
+        })
+        
+        //clearInterval() and clearTimeout() both are just a part of setTimeout() and setInterval() respectively, they can't be separate to each other.
+    </script>
+  </body>
+</html>
