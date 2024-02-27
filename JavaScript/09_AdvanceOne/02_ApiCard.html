@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #424242; color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;">
     
-    <div id="cardId"></div>
+    <div id="cardId" style="color: black; display: flex; align-items: center; justify-content: center;"></div>
 
 
     <script>
@@ -35,7 +35,9 @@
             newDiv.style.backgroundColor = 'yellow';
             document.querySelector('#cardId').appendChild (newDiv)
             // newDiv.style.backgroundImage = image //unable to add image
-            console.log(image);
+            newDiv.innerHTML = `<img style = " width = 5rem; height= 5rem; src="${decodeURI(image)}" "></img>`
+            // console.log(image);
+            newDiv.innerHTML = followers;
 
 
         }
