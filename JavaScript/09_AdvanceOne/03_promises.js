@@ -96,3 +96,13 @@ async function consumePromiseFive() {
     }
 }
 consumePromiseFive();
+
+
+
+fetch('https://api.github.com/users/Info-Prince').then ((response) => {
+    return response.json();
+}).then ( (data) => {
+    console.log(data);
+}).catch( (error) => {
+    console.log(error);
+})
