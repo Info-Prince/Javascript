@@ -6,7 +6,7 @@
 
 // in most of the situation promises is being consumed . But promises can be created as well.
 
-//A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+//A Promise is an object representing the eventual completion or failure of an asynchronous operation. //without blocking code read the file
 
 
 //in general promise can be resolve or can be rejected.
@@ -84,7 +84,7 @@ const promiseFive = new Promise ( (resolve, reject) => {
         } else {
             reject ('ERROR:- JS Went Wrong')
         }
-    })
+    },3000)
 })
 
 async function consumePromiseFive() {
