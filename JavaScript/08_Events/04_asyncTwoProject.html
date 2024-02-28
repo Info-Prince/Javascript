@@ -12,15 +12,26 @@
 
 
     <script>
+
+      //setTimeout() :- The setTimeout() is executed only once after mentioned time.
+      //clearTimeout() :- The clearTimeout is used to prevent the setTimeout(). generally it will be used on specific events where we need to prevent or stop something. like changing text after a specified (seconds) time.
+
+      //setInterval() :- If you need repeated executions, use setInterval(). It'll execute same given code repeatedly after mentioned time.
+      //clearInterval() :- The clearInterval is used to prevent setInterval. generally It'll be used on specific events where we need to prevent or stop something. like changing backgroundColor after a specified period of time.
+
+
+
+
+
         // setInterval(reference, time, string or data) :- it can take three parameter        
         const sayDate = (str) => {
             console.log(str, Date.now ());
         }
-        const intervalId = setInterval(sayDate, 1000, "hi" );
+        let intervalId;
 
         document.querySelector ('#start').addEventListener ('click', (e) => {
             e.preventDefault()
-            const intervalId = setInterval(sayDate, 1000, "hi" )
+            intervalId = setInterval(sayDate, 1000, "hi" );
         })
 
         // clearInterval (intervalId) //it has nothing value to use as is it, it should be add on an event.

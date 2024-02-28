@@ -79,10 +79,11 @@
         // console.log(e);
         // console.log(e.target); // if we remove this then image  will be removed but li (list item) won't. so fix it
 
-        console.log(e.target.tagName);
-        if (e.target.tagName === ('IMG')) {
+        const targetElem = e.target.tagName;
+        console.log(targetElem);
+        if (targetElem === ('IMG')) { //run only when img html tag.
             console.log (e.target.id)
-            let removeIt = e.target.parentNode;
+            let removeIt = e.target.parentNode; //referred to li, since e.target === img.
             removeIt.remove();
         }
         // removeIt.parentNode.removeChild(removeIt); // both method having same imp.

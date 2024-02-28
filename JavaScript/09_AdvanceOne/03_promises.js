@@ -1,7 +1,7 @@
 //Promises complete in future.
 // promises having three steps:- 
 // 1. pending 
-// 2. fulfilled
+// 2. fulfilled asf
 // 3. rejected
 
 // in most of the situation promises is being consumed . But promises can be created as well.

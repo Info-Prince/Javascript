@@ -3,7 +3,7 @@
 //JavaScript:-  By default JavaScript is a synchronous language, having single thread. This means javaScript execute code line by line.
 
 //Execution Context :- 
-    // -> Execute one line by line. it means until js complete one operation it won't move forward to execute another operation.
+    // -> Execute code line by line. it means until js complete one operation it won't move forward to execute another operation.
     // In short, Each operation waits for the last one to complete before executing.
 
 // Blocking code VS non Blocking code
