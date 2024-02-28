@@ -42,12 +42,12 @@
         xhr.onreadystatechange = function () {
             // console.log(xhr.readyState); //one by one it will display state of xhr obj.
             if (xhr.readyState === 4) {
-                const data = JSON.parse(this.responseText); //string to JSON
+                const data = JSON.parse(this.responseText); //string to JSON, note :- this. is not being used with arrow function.
                 console.log(data.id);
                 //get photo and followers and make a card
                 let image = data.avatar_url;
                 let followers = data.followers;
-                card(image, followers)
+                card(image, followers);
             }
         }
 
@@ -58,10 +58,9 @@
             newDiv.style.aspectRatio = '1';
             newDiv.style.backgroundColor = 'yellow';
             document.body.querySelector('#cardId').appendChild(newDiv)
-            newDiv.style.backgroundImage = image;
-            
+            newDiv.style.backgroundImage = image;            
         }
-        // note :- this is not being used with arrow function.
+        
         xhr.send ();
 
     </script>

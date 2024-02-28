@@ -7,8 +7,8 @@
 </head>
 <body style="background-color: #424242; color: white; display: flex; align-items: center; justify-content: center; flex-direction: column;">
     
-    <div id="cardId" style="color: black; display: flex; align-items: center; justify-content: center;"></div>
-
+    <div id="cardId" style="color: black; display: flex; flex-direction: column; align-items: center; justify-content: center;"></div>
+    <img src="image" alt="" style="border-radius: 1rem;" >
 
     <script>
         const requestUrl = 'https://api.github.com/users/Info-Prince';
@@ -29,15 +29,28 @@
         function displayCard (image, followers ) {
             const cardIds = document.querySelector('#cardId');
             console.log(cardIds);
-            const newDiv = document.createElement('div');
-            newDiv.style.width = '10rem';
-            newDiv.style.aspectRatio = '1';
-            newDiv.style.backgroundColor = 'yellow';
-            document.querySelector('#cardId').appendChild (newDiv)
-            // newDiv.style.backgroundImage = image //unable to add image
-            newDiv.innerHTML = `<img style = " width = 5rem; height= 5rem; src="${decodeURI(image)}" "></img>`
-            // console.log(image);
-            newDiv.innerHTML = followers;
+            // const newDiv = document.createElement('div');
+            // newDiv.style.width = '10rem';
+            // newDiv.style.aspectRatio = '1';
+            // newDiv.style.backgroundColor = 'yellow';
+            // document.querySelector('#cardId').appendChild (newDiv)
+            // // newDiv.style.backgroundImage = image //unable to add image
+            // newDiv.innerHTML = `<img style = " width = 5rem; height= 5rem; src="${decodeURI(image)}" "></img>`
+            // // console.log(image);
+            // newDiv.innerHTML = followers;
+            cardIds.style.width = '16rem';
+            cardIds.style.aspectRatio = '1';
+            cardIds.style.backgroundColor = "#b7e5dd";
+            cardIds.style.borderRadius = "2rem";
+            cardIds.style.boxShadow = "box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;"
+            cardIds.innerHTML = `
+            
+                <img src="${image}"; style="width: 10rem; height: 10rem; background-size: contain; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; border-radius: 1.3rem; margin-top: 1rem;"> 
+                </img>
+                <h1 >Followers = ${followers}</h1>
+            
+            
+            `
 
 
         }
