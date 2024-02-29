@@ -1,7 +1,7 @@
 // object literal
 
 // const user = {
-//     username: 'prince', 
+//     username: 'prince',
 //     loginCount: 8, 
 //     signedIn: true, 
 
@@ -46,7 +46,7 @@ console.log(userTwo.constructor);
 
 
 // new keyword :- 
-// 1. firstly empty object will be created, called instance
+// 1. firstly empty object will be created, which is called instance
 // 2. constructor function is being called due to new keyword. it works to pack all arguments and give it back.
 //3. in third step all arguments is being injected into this keyword.
 //4. In Forth step, we got our data in function
