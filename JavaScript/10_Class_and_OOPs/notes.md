@@ -9,10 +9,13 @@
 ## Why use OOPs
 
 ## Parts of OOPs
-- Object literal 
+Object literal 
+
 - Constructor function 
+- Prototypes
 - Classes 
 - Instances (new, this)
+
 
 ## 4 Pillars
 Go through yourself
