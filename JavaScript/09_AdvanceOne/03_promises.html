@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-
-
-
+  </head>
+  <body>
+    <div
+      class="imageId"
+      style="width: 13rem; aspect-ratio: 1; background-color: rgba(51, 150, 208, 0.267); display: flex; align-items: center; justify-content: center; flex-direction: column; border-radius: 1rem;"
+    ></div>
 
     <script>
-        //promises complete in future.
+      fetch("https://api.github.com/users/Info-Prince")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          // console.log(data);
+          let image = data.avatar_url;
+          console.log(image);
+          let followers = data.followers;
+          card(image, followers);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      function card(image, followers) {
+        console.log(image);
+        document.querySelector(".imageId").innerHTML= `
+        
+            <img src="${image}"; style= "width:8rem; aspect-ratio:1; "> 
+
+            </img>
+            <p>Followers ${followers}</p>
+        
+        `;
+      }
     </script>
-</body>
+  </body>
 </html>

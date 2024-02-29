@@ -35,7 +35,7 @@
         // xhr.send(null);
 
         const requestUrl = 'https://api.github.com/users/Info-Prince';
-        const xhr = new XMLHttpRequest ();
+        const xhr = new XMLHttpRequest (requestUrl);
         console.log('UNSENT', xhr.readyState);
         xhr.open('GET', requestUrl) // first parameter is get method and 2nd calling url request.
         console.log('OPENED', xhr.readyState);
@@ -57,7 +57,12 @@
             newDiv.style.width = '10rem';
             newDiv.style.aspectRatio = '1';
             newDiv.style.backgroundColor = 'yellow';
-            document.body.querySelector('#cardId').appendChild(newDiv)
+            document.body.querySelector('#cardId').innerHTML = `
+            
+                <img src="${image}" style= " width: 10rem; aspect-ratio:1;  ">
+
+                </img>
+            `
             newDiv.style.backgroundImage = image;            
         }
         

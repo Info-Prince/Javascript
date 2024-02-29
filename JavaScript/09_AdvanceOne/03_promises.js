@@ -1,7 +1,7 @@
 //Promises complete in future.
 // promises having three steps:- 
 // 1. pending 
-// 2. fulfilled asf
+// 2. fulfilled
 // 3. rejected
 
 // in most of the situation promises is being consumed . But promises can be created as well.
@@ -105,4 +105,6 @@ fetch('https://api.github.com/users/Info-Prince').then ((response) => {
     console.log(data);
 }).catch( (error) => {
     console.log(error);
+}).finally ( () => {
+    console.log('Finally the promise either resolve or rejected.');
 })
