@@ -77,7 +77,7 @@ function endGame () {
     userInput.value = '';
     userInput.setAttribute('disabled', '');
     p.classList.add('button');
-    p.innerHTML = `<h3 id= "newGame">Start New Game</h3>`;
+    p.innerHTML = `<h3 id= "newGame" style= "cursor: pointer; color: blue;">Start New Game</h3>`;
     startOver.appendChild(p);
 
     playGame = false;
