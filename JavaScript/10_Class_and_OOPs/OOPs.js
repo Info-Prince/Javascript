@@ -8,8 +8,8 @@
 //     getUserDetails: function () {
 //         console.log('Got user details from database');
 //         console.log(`Username: ${this.username}`);
-//         console.log(this);
-//     }
+        // console.log(this);
+//     } 
 // }
 
 // console.log(user.username);
@@ -35,10 +35,10 @@ function User (username , loginCount, isLoggedIn) {
 // const userOne = User('prince', 23, true);
 // const userTwo = User('Let\'s do', 4, 11) //it will override the value of user , it's not way to code. All program can got into a disaster problem.
 
-const userOne = new User('prince', 23, true);
-const userTwo = new User('Let\'s do', 4, true); //now all problem solved, constructor function will give new instances every time. whatever changes you made that will be made on that specific copy only. OTHER W'ONT EFFECTED.
-// console.log(userOne);
-// console.log(userTwo);
+const userOne = new User('prince', 23, true); //new instance userOne created
+const userTwo = new User('Let\'s do', 4, true); //now all problem solved, constructor function will give new instances every time. whatever changes you made that will be made on that specific copy only. OTHER W'ONT GET EFFECTED.
+console.log(userOne);
+console.log(userTwo);
 
 console.log(userTwo.constructor);
 //constructor property basically, it's a reference about itself. //javascript instanceof

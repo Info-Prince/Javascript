@@ -1,7 +1,7 @@
 // let myName = "Prince     ";
 // console.log(myName.trueLength());
-// target of trueLength method is to give proper msg (true length of string is ${myName} without considering white spaces)
-
+// target of trueLength method is to give proper msg (true length of string is the length of ${myName} without considering white spaces)
+ 
 
 let myHeros = ["Thor", "spiderMan"];
 
@@ -29,7 +29,7 @@ Array.prototype.heyHitesh = function ()  {
 }
 
 // myHeros.heyHitesh();
-// heroPower.heyHitesh(); //it wouldn't have such power
+// heroPower.heyHitesh(); // NO, it wouldn't have such power
 
 
 //* ---------------------OLD STNTAX INHERITANCE--------------
@@ -59,7 +59,7 @@ Object.setPrototypeOf(teacher, user)
 let anotherName = "chaiAurCode    ";
 
 String.prototype.trueLength = function ()   {
-    console.log(`${this}`); // inside of this there is current context, and on every calling current context is getting changed. That's what we are getting diff diff msg.
+    console.log(`${this}`); // inside of this there is current context, and on every calling current context is getting changed , if we called with diff diff arguments. That's what we are getting diff diff msg.
     console.log(`True Length is: ${this.trim().length}`);
 }
 anotherName.trueLength();

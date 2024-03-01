@@ -32,6 +32,7 @@ function createUser (username, price) {
 //injecting function in function , that means we can use a function as an object.
 createUser.prototype.increment = function () {
     this.price++; //means jisne v call kiya hai uska kaam krdo
+    console.log(this.price);
 }
 createUser.prototype.printMe = function () {
     console.log(`score is ${this.price}`);
@@ -41,10 +42,10 @@ const chai = new createUser ('chai', 25)
 const tea = new createUser ('tea', 250)
 
 chai.printMe();
+chai.increment();
 
 
-
-/*
+/* 
 
 Here's what happens behind the scenes when the new keyword is used:
 
