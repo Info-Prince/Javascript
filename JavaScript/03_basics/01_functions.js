@@ -14,7 +14,7 @@
 //     console.log(number1 + number2);
 // }
 
-// function  having parameter and reference having arguement
+// function  having parameter and reference having argument
 function addTwoNumbers (number1, number2) {
     //console.log(`Number1 = ${number1} and Number2 = ${number2}`);
     // let result = number1 + number2;
@@ -60,7 +60,7 @@ const user = {
 }
 
 function handleObject (anyObject)     {
-    console.log(`Usernaem is ${anyObject.username} and price is ${anyObject.price}`);
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
 }
 
 // handleObject(user);

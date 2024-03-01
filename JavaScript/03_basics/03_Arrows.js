@@ -40,7 +40,7 @@ const chai3 = () =>  {
 // chai3()
 
 ////////////////Arrow function representation
-() => {} //that's it. but for performing action on it we can hold named this function and take paramenters.
+() => {} //that's it. but for performing action on it we can hold named this function and take parameters.
 
 // const add = (num1 , num2) => {
 //     return num1+num2;
