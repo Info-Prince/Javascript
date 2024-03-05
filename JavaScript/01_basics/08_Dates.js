@@ -4,13 +4,13 @@ let myDate = new Date ();
 // console.log(myDate.toDateString());
 /*console.log(myDate.toISOString());
 console.log(myDate.toJSON());  */
-/* console.log(myDate.toLocaleString()); //date and time
-console.log(myDate.toLocaleDateString()); //date only
-console.log(myDate.toLocaleTimeString()); //time only */
+//  console.log(myDate.toLocaleString()); //date and time
+// console.log(myDate.toLocaleDateString()); //date only
+// console.log(myDate.toLocaleTimeString()); //time only 
 
 ///////////////////////////////////////////////
-// let myCreatedDate = new Date(2024, 0, 10); //month start with 0 (jan) and end to 11 (dec).
-// console.log(myCreatedDate.toLocaleString());
+let myCreatedDate = new Date(2024, 0, 10); //month start with 0 (jan) and end to 11 (dec).
+console.log(myCreatedDate.toLocaleString());
 
 // let myCreatedDate = new Date (2024, 0, 10, 13, 55)
 // console.log(myCreatedDate.toLocaleString());
@@ -23,7 +23,7 @@ console.log(myDate.toLocaleTimeString()); //time only */
 let myTimeStamp = Date.now();
 
 // console.log(myTimeStamp); //time in millisecond
-// // console.log(myCreatedDate.getTime());
+// console.log(myCreatedDate.getTime());
 // console.log(Math.floor(Date.now()/1000)); //time in second
 //////////////////////////////////////////
 

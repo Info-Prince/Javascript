@@ -1,5 +1,5 @@
 // Immediately Invoked Function Expressions (IIFE)
-//global scope ke pollution ko hatane ke liye IIFE ka use kiya jata hai, sometimes global scope ke object ya variable or else function ko pollute krte hai use hi ignore krne ke liye IIFE ka use kiya jata hai.
+//global scope ke pollution ko hatane ke liye IIFE ka use kiya jata hai, sometimes global scope ke object ya variable or else function ko pollute krte hai ushe hi ignore krne ke liye IIFE ka use kiya jata hai.
 
 // IIFE () () 
 // (function definition) (execution call) 

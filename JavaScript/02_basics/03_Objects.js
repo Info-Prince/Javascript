@@ -1,5 +1,5 @@
 // singleton
-// Object.create (constructor method of creating object) it's singleton
+// Object.create //(constructor method of creating object) it's singleton
 
 // object literals
 

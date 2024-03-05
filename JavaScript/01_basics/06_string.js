@@ -13,7 +13,7 @@ console.log(gameName.__proto__);
 // console.log(gameName.length);
 // console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(3));
-// console.log(gameName.indexOf("i"));
+console.log(gameName.indexOf("i"));
 
 const newString = gameName.substring(0, 4);
 console.log(newString);
