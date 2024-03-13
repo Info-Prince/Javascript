@@ -6,7 +6,7 @@
 
 // in most of the situation promises is being consumed . But promises can be created as well.
 
-//A Promise is an object representing the eventual completion or failure of an asynchronous operation. //without blocking code read the file
+//A Promise is an object representing the eventual completion or failure of an asynchronous operation. //without blocking code read  the file
 
 
 //in general promise can be resolve or can be rejected.
@@ -98,6 +98,8 @@ async function consumePromiseFive() {
 consumePromiseFive();
 
 
+
+// fetch('https://api.github.com/users/Info-Prince') // it can be considered as promiseOne which is being consumed , And response is parameter of function which will get all data of fetched promise in string format.
 
 fetch('https://api.github.com/users/Info-Prince').then ((response) => {
     return response.json();
