@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .inputAndBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        & input {
+          padding: 0.3rem 1rem;
+        }
+        & button {
+          padding: 0.3rem 1rem;
+          cursor: pointer;
+        }
+      }
+      .main-todo-elem ul {
+        margin: 1rem 0;
+        gap: 1rem;
+        display: grid;
+        width: 22rem;
+        grid-template-columns: 1fr 0.3fr;
+        align-items: center;
+        height: auto;
+        & .deleteBtn {
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inputAndBtn">
+        <input type="text" id="inputField" />
+        <button id="inputBtn" class="addBtn">Add Todo</button>
+      </div>
+
+      <section class="add-todo--list">
+        <!-- <div class="main-todo-elem">
+          <ul>
+            <li>item1</li>
+            <button class="deleteBtn">Delete</button>
+          </ul>
+        </div> -->
+      </section>
+    </div>
+
+
+
+    <script>
+        const inputField = document.getElementById("inputField");
+        const addBtn = document.querySelector(".addBtn");
+        const parentTodoElem = document.querySelector('.add-todo--list')
+        let addTodoElem = getTodoListFromLocal() || [];
+        let deleteBtn;
+
+        addBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            addTodo();
+        });
+
+        function addTodo() {
+
+          let inputElem = inputField.value.trim();
+
+          if ( inputElem !== '' && !addTodoElem.includes(inputElem)) {
+            
+            addTodoElem.push(inputElem);
+            addTodoElem = [...new Set(addTodoElem)] //used to make unique element.
+            console.log(addTodoElem);
+            localStorage.setItem('YoutubeTodoList', JSON.stringify(addTodoElem));
+
+            addTodoDynamicElem(inputElem)
+          }
+          
+          inputField.value = '';
+        
+        }
+
+        function getTodoListFromLocal ()  {
+         return JSON.parse(localStorage.getItem('YoutubeTodoList'));
+          console.log('executed');
+        }
+
+        function showTodoList ()  {
+          console.log(addTodoElem);
+
+          addTodoElem.forEach( (curElem) => {
+            addTodoDynamicElem(curElem)
+          });
+        }
+        showTodoList();
+        
+        function addTodoDynamicElem (curElem)  {
+          const todoSection = document.querySelector(".add-todo--list");
+          const newElem = document.createElement("div");
+        //   newElem.setAttribute("class", "main-todo-elem");
+          newElem.classList.add('main-todo-elem')
+          newElem.innerHTML = 
+          `
+          <ul>
+          <li>${curElem}</li>
+          <button class="deleteBtn">Delete</button>
+          </ul>
+          `;
+          todoSection.appendChild(newElem);
+        }
+
+        parentTodoElem.addEventListener ( 'click', (e) => {
+          e.preventDefault();
+          removeTodoElem (e);
+        })
+
+        function removeTodoElem (e) {
+          const todoRemove = e.target;
+          let todoListContent = todoRemove.previousElementSibling.innerText;
+          console.log(todoListContent);
+
+          addTodoElem = addTodoElem.filter ( (curElem) => {
+            console.log(curElem);
+            return curElem !== addTodoElem.toLowerCase();
+          })
+        }
+
+      </script>
+  </body>
+</html>
