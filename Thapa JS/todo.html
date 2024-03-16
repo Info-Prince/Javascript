@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -54,12 +54,7 @@
       </div>
 
       <section class="add-todo--list">
-        <!-- <div class="main-todo-elem">
-          <ul>
-            <li>item1</li>
-            <button class="deleteBtn">Delete</button>
-          </ul>
-        </div> -->
+        
       </section>
     </div>
 
@@ -125,21 +120,201 @@
         }
 
         parentTodoElem.addEventListener ( 'click', (e) => {
-          e.preventDefault();
+          // e.preventDefault();
+          e.stopPropagation();
           removeTodoElem (e);
         })
 
         function removeTodoElem (e) {
+          e.stopPropagation();
           const todoRemove = e.target;
-          let todoListContent = todoRemove.previousElementSibling.innerText;
+          let todoListContent = (todoRemove.parentElement).parentElement;
           console.log(todoListContent);
 
-          addTodoElem = addTodoElem.filter ( (curElem) => {
-            console.log(curElem);
-            return curElem !== addTodoElem.toLowerCase();
-          })
+          todoListContent.remove();
         }
 
       </script>
+  </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #242424;
+        color: white;
+      }
+      .flex,
+      .justify,
+      .align {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr 0.3fr;
+      }
+      .container {
+        flex-direction: column;
+        height: 100vh;
+        gap: 2rem;
+        margin-bottom: 1rem;
+      }
+      form {
+        gap: 2rem;
+        width: 27rem;
+        & #inputArea {
+          padding: 0.6rem 1rem;
+          border-radius: 0.6rem;
+          border: 1px solid black;
+        }
+        & .addTodoBtn {
+          padding: 0.6rem 1.4rem;
+          border-radius: 1.8rem;
+          cursor: pointer;
+          border: 2px solid #e7fc10;
+          background-color: #e7fc10;
+          color: black;
+          font-weight: 700;
+          transition: all 0.25s linear;
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+      #contentSection .todoDiv .grid .deleteBtn {
+        padding: 0.6rem 0.9rem;
+          border-radius: 1.8rem;
+          cursor: pointer;
+          border: 2px solid #e7fc10;
+          background-color: #e7fc10;
+          color: black;
+          font-weight: 700;
+          transition: all 0.25s linear;
+
+          &:hover {
+            background-color: black;
+            color: white;
+          }
+      }
+      #todoListItem {
+        display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0.4rem;
+      }
+
+      .todoDiv {
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container flex justify align">
+      <form class="flex justify align">
+        <input type="text" id="inputArea" />
+        <button class="addTodoBtn">Add Todo</button>
+      </form>
+      <section id="contentSection">
+        <!-- <div class="todoDiv">
+          <ul class="grid">
+            <li id="todoListItem">Mango</li>
+            <button class="deleteBtn">Delete</button>
+          </ul>
+        </div> -->
+      </section>
+    </div>
+
+
+    <script>
+        const inputElem = document.querySelector('#inputArea');
+        const addTodoBtn = document.querySelector('.addTodoBtn');
+        let deleteBtn, newDiv;
+        let todoArray = getElemFromLocalStorage() || [];
+        
+        addTodoBtn.addEventListener ('click', (eventObj) => {
+          eventObj.stopPropagation();
+          eventObj.preventDefault();
+          addTodo();
+        })
+        
+        const mainTodoSection = document.querySelector('#contentSection')
+        mainTodoSection.addEventListener ('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          todoDelete(e);
+        })
+
+        function addTodo ()     {
+            let inputElemVal = inputElem.value.trim();
+
+            if ( (inputElemVal!== '') && (!todoArray.includes(inputElemVal)) ) {
+              todoArray.push(inputElemVal); // one by one element is added into todoArray.
+              console.log(todoArray);
+              addDynamicElem(inputElemVal)
+            }
+            
+            inputElem.value = '';
+            localStorage.setItem('YoutubeContent' , JSON.stringify(todoArray))
+        }
+
+        function addDynamicElem(inputElemVal) {
+              const contentSection = document.querySelector('#contentSection');
+              newDiv = document.createElement('div');
+              newDiv.setAttribute('class', 'todoDiv');
+              newDiv.innerHTML = 
+              `
+              <ul class="grid">
+                  <li id="todoListItem">${inputElemVal}</li>
+                  <button class="deleteBtn">Delete</button>
+              </ul>
+              
+              `
+              contentSection.appendChild(newDiv);
+        }
+
+        function todoDelete (e)  {
+          const deleteElem = ((e.target.parentElement).parentElement);
+          todoArray.forEach ( (curElem) => {
+            if (curElem === e.target.previousElementSibling.innerText) {
+              deleteElem.remove();
+              console.log(todoArray);
+            }
+          })
+
+          removeFromLocalStorage();
+        }
+        
+        function getElemFromLocalStorage() {
+          return JSON.parse(localStorage.getItem ('YoutubeContent'))
+        }
+
+        function showTodoElem ()  {
+          todoArray.forEach ( (curElem) => {
+            addDynamicElem (curElem);
+          })
+        }
+        showTodoElem();
+
+        function removeFromLocalStorage ()  {
+          // localStorage.clear()
+          localStorage.removeItem('')
+        }
+    </script>
   </body>
 </html>
