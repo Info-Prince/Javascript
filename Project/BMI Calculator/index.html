@@ -10,9 +10,17 @@
         padding: 0;
         box-sizing: border-box;
       }
+      p {
+        line-height: 1.6;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+      }
       body {
         background-color: #424242;
         color: white;
+      }
+      .container {
+        padding: 0 1.5rem;
       }
       .flex {
         display: flex;
@@ -47,6 +55,7 @@
         font-size: 1rem;
         font-weight: 700;
       }
+      
     </style>
   </head>
   <body>
@@ -59,9 +68,9 @@
         <div class="result"></div>
         <div id="weight-guide">
           <h1>BMI Weight Guide</h1>
-          <p>Under Weight = Less than 18.6</p>
-          <p>Normal Range = 18.6 and 24.9</p>
-          <p>Overweight = Greater than 24.9</p>
+          <p class="underWeight">Under Weight = Less than 18.6</p>
+          <p class="normalRange">Normal Range = 18.6 and 24.9</p>
+          <p class="overWeight">Overweight = Greater than 24.9</p>
         </div>
       </form>
     </div>
