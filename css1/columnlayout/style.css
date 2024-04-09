@@ -64,7 +64,7 @@ p {
   /* column-rule-color: red;
   column-rule-style: dotted;
   column-rule-width: 10px; */
-  column-rule: 2px dashed red;
+  column-rule: 2px solid red;
   column-gap: 50px;
   text-align: justify;
 }

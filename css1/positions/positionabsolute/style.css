@@ -78,14 +78,14 @@ body {
 /*? Actual Positions starts Here  */
 
 .parent-div {
-  position: relative;
+  position: relative; /*? position relative to itself */
   /* margin-left: 200px; */
   /* left: 300px; */
 }
 
 /* positioned all child div */
 .child {
-  position: absolute;
+  position: absolute; /*? position relative to it's nearest parent element*/
 }
 
 /* top, left, bottom, right  */
