@@ -33,7 +33,7 @@
 29. psuedo-class ✅
 30. column layout ✅
 31. flexbox ✅
-32. grid 
+32. grid ✅
 33. transitions
 34. transform
 35. animation 
