@@ -7,7 +7,7 @@ console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
 const gameName = new String ("Prince-prince-prince");
 
-// console.log(gameName[0]);
+console.log(gameName[0]);
 console.log(gameName.__proto__);
 
 // console.log(gameName.length);
@@ -25,7 +25,7 @@ const newStringOne = "   prince    ";
 console.log(newStringOne);
 console.log(newStringOne.trim()); //all white spaces trimmed.
 
-const url = "https://cssbyprince.netlify-app";
+const url = "https://cssbyprince-netlify-app";
 console.log(url.replace("-" , "."));
 
 console.log(url.includes("prince")); //boolean type. prince includes or not ?

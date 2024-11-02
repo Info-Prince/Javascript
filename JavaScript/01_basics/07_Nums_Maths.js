@@ -9,12 +9,12 @@ console.log(balance.toString().length);
 console.log(balance.toString().length.toFixed(2));
 console.log(balance.toFixed(2));
 
-// const otherNumber = 123.7431;
-// console.log(otherNumber.toPrecision(3));
+const otherNumber = 123.7431;
+console.log(otherNumber.toPrecision(3));
 
-// const hundreds = 100000000;
-// console.log(hundreds.toLocaleString());
-// console.log(hundreds.toLocaleString("en-IN"));
+const hundreds = 100000000;
+console.log(hundreds.toLocaleString());
+console.log(hundreds.toLocaleString("en-IN"));
 
 
 //! ++++++++++++++++   Maths     +++++++++++++++++++

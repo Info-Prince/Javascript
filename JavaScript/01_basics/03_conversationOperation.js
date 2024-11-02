@@ -70,6 +70,7 @@ console.log(stringNumber);
 // console.log(+true);
 // // console.log(true+); // wrong syntax
 // console.log(+"");
+// console.log("");
 
 
 //Prefix and Postfix operator
