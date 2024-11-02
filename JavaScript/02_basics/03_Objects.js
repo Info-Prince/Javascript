@@ -17,14 +17,14 @@ const jsUser = {
     LastLoginDays: ["Sunday", "Monday"]
 }
 
-// console.log(jsUser.name);
-// console.log(jsUser["name"]); //both correct in this situation.
+console.log(jsUser.name);
+console.log(jsUser["name"]); //both correct in this situation.
 
-// console.log(jsUser["last name"]); //this won't accessed as first method.
-// console.log(jsUser[mySym]);
+console.log(jsUser["last name"]); //this won't accessed as first method.
+console.log(jsUser[mySym]);
 
 jsUser.email = "prince@chatgpt.com";
-// console.log(jsUser);
+console.log(jsUser);
 // Object.freeze(jsUser);
 jsUser.email = "prince@microsoft.com";
 console.log(jsUser);
