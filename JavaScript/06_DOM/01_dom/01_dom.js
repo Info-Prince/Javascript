@@ -14,10 +14,10 @@ title1.innerText //it will show all visible content
 title1.textContent // it will show all visible or hidden content
 'DOM Learning on Chai or Code Test Series'
 
-title1.innerHTML // it will show all content inside of accessable element.
+title1.innerHTML // it will show all content inside of accessable element. 
 // 'DOM Learning on Chai or Code <span style="display: none;">Test Series</span>'
 
-document.querySelector("h2")​
+// document.querySelector("h2")​
 document.querySelector('#title')
 document.querySelector('.heading')
 document.querySelector("input[type= 'password' ]")
@@ -26,9 +26,8 @@ document.querySelector("input[type= 'password' ]")
 const myul = document.querySelector('ul')
 const listitem1 = myul.querySelector('li')
 
-​
 listitem1.style.backgroundColor = 'yellow'
-listitem1.style.backgroundColor = 'green'
+// listitem1.style.backgroundColor = 'green'
 listitem1.style.padding= '2rem'
 listitem1.style.borderRadius= '1rem'
 listitem1.innerText = 'Python'
@@ -39,7 +38,9 @@ tempLiList[1].style.color = 'green' // some features match with array.
 
 const myh1 = document.querySelectorAll('h1')
 myh1[0].style.color = 'green'
-
+myh1[0].style.backgroundColor = 'pink'
+myh1[0].style.padding = '1rem 1.5rem'
+myh1[0].style.borderRadius = '1rem'
 
 //uses of forEach () function 
 const myul1 = document.querySelectorAll('li')
@@ -58,6 +59,12 @@ const tempclassList = document.getElementsByClassName('list-items')
 const convertedArray = Array.from(tempclassList) // done now you can use forEach() function
 convertedArray.forEach(function (list) {
     list.style.color = 'orange'
+    if(list.innerText == "CSS")
+        list.style.color = 'blue';
+
+    // list.addEventListener('click', (e) => {
+    //     changeColor(list.innerText);        
+    // })
 })
 
 
